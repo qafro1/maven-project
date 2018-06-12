@@ -15,7 +15,7 @@ pipeline {
         stage ('Test') {
             steps {
                 sh 'make check || true'
-                junit '**/target/*.war'
+                junit '**/target/*.xml'
             }
         }
     }
