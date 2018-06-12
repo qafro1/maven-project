@@ -12,6 +12,12 @@ pipeline {
                 archiveArtifacts artifacts: '**/target/*.war'
             }
         }
+        stage ('Test') {
+            steps {
+                sh 'make check || true'
+                
+            }
+        }
     }
 }
 
